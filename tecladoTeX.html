@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dos teclados de Mac especializados en la escritura de TeX/LaTeX</title>
+  <meta name="description" content="Dos diseños de teclado para Mac adaptados a la escritura de TeX y LaTeX con teclado español.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html">Juan L. Varona</a>
+      <nav class="lang" aria-label="Idioma">
+        <a href="tecladoTeX.html" hreflang="es" aria-current="page">Español</a>
+        <a href="TeXkeylayout.html" hreflang="en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="wrap">
+    <header class="page-header">
+      <h1>Dos teclados de Mac especializados en la escritura de TeX/LaTeX</h1>
+      <p class="subrole muted">Juan Luis Varona, 21-9-2004, bajo licencia GPL de GNU</p>
+    </header>
+
+    <section>
+      <p>Bienvenido a las páginas web de
+        <a href="mailto:jvarona@unirioja.es">Juan Luis Varona Malumbres</a>.
+        En esta página obtendrás información sobre
+        dos diseños de teclado desarrollados por mí.
+        Están particularmente bien adaptados para escribir TeX y LaTeX
+        en un Mac con teclado español. Requieren el sistema Mac OS X 10.2 o posterior.</p>
+
+      <p>Si quieres instalártelos y usarlos,
+        <a href="http://www.unirioja.es/cu/jvarona/downloads/TecladosTeX.zip">pulsa aquí</a>
+        para descargar un archivo comprimido que contiene todo lo necesario.</p>
+
+      <p>A continuación, describimos lo que contiene, y cómo usarlo.</p>
+    </section>
+
+    <section>
+      <h2>Instalación y uso</h2>
+
+      <p>Los dos archivos
+        <code>TeX-7bits-spanish.keylayout</code>
+        y
+        <code>TeX-8bits-spanish.keylayout</code>
+        son dos diseños de teclado cuyo objetivo es hacer más sencilla
+        la escritura con TeX/LaTeX en cualquier programa de Mac OS X
+        (versión 10.2 o posterior; no funcionan con 10.1).</p>
+
+      <p>Vienen acompañados de sus correspondientes iconos
+        <code>TeX-7bits-spanish.icns</code>
+        y
+        <code>TeX-8bits-spanish.icns</code>
+        Están pensados para escribir en un teclado en español;
+        funcionan con cualquier otro teclado, pero algunos símbolos no
+        estarían colocados donde indica físicamente el teclado en sí,
+        pues la disposición de las teclas varía de país a país.
+        (Por supuesto, el usuario puede adaptar los dos archivos
+        .keylayout según sus necesidades y preferencias.)</p>
+
+      <p>El correspondiente a «7bits» usa la codificación de TeX tradicional.
+        Por ejemplo, al pulsar las teclas correspondientes a
+        <tt>ñ</tt>, <tt>á</tt>, <tt>¿</tt>
+        escribe <tt>\~n</tt>, <tt>\'a</tt>, <tt>?`</tt>.
+        El de «8bits» las mantiene en su forma original,
+        y es más adecuado para escribir LaTeX con
+        <tt>\usepackage[utf8]{inputenc}</tt> (o los actualmente obsoletos
+        <tt>\usepackage[applemac]{inputenc}</tt> y <tt>\usepackage[latin1]{inputenc}</tt>).
+        Gran parte de la utilidad de ambos radica en que muchas
+        letras griegas se pueden teclear de manera muy rápida.
+        Por ejemplo, al teclear <tt>alt-a</tt> aparece <tt>\alpha</tt>,
+        y al teclear <tt>alt-may-S</tt> aparece <tt>\Sigma</tt>.</p>
+
+      <p>Además, ambos teclados tienen las teclas correspondientes
+        a <tt>`</tt> y <tt>^</tt>
+        desactivadas como teclas muertas, pues esos acentos no existen
+        en español y, encima, estorban el comportamiento de dos
+        caracteres muy usados en TeX; si se quieren usar como
+        acentos, hay que emplear <tt>alt-may-`</tt> y <tt>alt-may-i</tt>, respectivamente.</p>
+
+      <p>Para usar los diseños de teclado hay que colocarlos en el
+        directorio
+        <code>Library/Keyboard Layouts</code>
+        del usuario (también se pueden poner en el correspondiente
+        directorio del System o de Network, si se quiere que todos
+        los usuarios del ordenador, o todos los usuarios de la red,
+        puedan usarlos). No hay problema en colocar ambos. ¡Ah!,
+        y los iconos se ponen en el mismo directorio. Una vez hecho
+        eso, su funcionamiento es como el de cualquier otro
+        diseño de teclado, por medio del panel Internacional de las
+        preferencias del sistema. Haciendo que aparezcan en la
+        barra de menús resulta muy sencillo cambiar de teclado
+        cuando lo deseemos.</p>
+
+      <p>Para ver qué es lo que se obtiene en cada tecla del teclado,
+        procede del siguente modo:
+        en el panel Internacional de las preferencias del sistema
+        (en el mismo lugar donde se activan los teclados),
+        haz que la paleta «Mostrar Visor de Teclado» aparezca en la barra de menús.
+        ¡Y úsala!</p>
+
+      <p><strong>Nota:</strong> En la distribución, hemos acompañado todo esto
+        con la Technical Note TN2056 de Apple,
+        y con una captura de pantalla que muestra cómo se ven los
+        posibles errores que hayamos cometido al modificar y reinstalar
+        los archivos .keylayout (véase más adelante).
+        Pero esto es útil sólo si queremos comprender el comportamiento interno
+        de los diseños de teclado, o si queremos hacer cambios en los archivos
+        .keylayout que se proporcionan.</p>
+    </section>
+
+    <section>
+      <h2>Algunas decisiones controvertidas</h2>
+
+      <p>De acuerdo a mi gusto personal, he tomado algunas decisiones
+        que algunos pueden no compartir:</p>
+
+      <ul>
+        <li><tt>\int</tt> es mucho más usado que <tt>\iota</tt>,
+          luego <tt>alt-i</tt> saca <tt>\int</tt>
+          en vez de <tt>\iota</tt> (no está previsto obtener <tt>\iota</tt> directamente).</li>
+        <li><tt>\varepsilon</tt> (que yo prefiero a <tt>\epsilon</tt>) es mucho más usado
+          que el símbolo del euro, luego ocupa su lugar en <tt>\alt-e</tt>
+          (para obtener <tt>\euro</tt> se puede usar <tt>alt-¡</tt>)</li>
+        <li>Las únicas letras griegas que no se pueden obtener
+          directamente con ninguna combinación de teclas son <tt>\varsigma</tt>
+          y <tt>\vartheta</tt>; no encontré ningún lugar adecuado para ellas.</li>
+        <li>En el teclado numérico, en vez de la «, decimal» aparece
+          un «. decimal». A mí me ha parecido más útil
+          (pues, además, spanish-babel puede transformar automáticamente
+          estos «.» en
+          «,» al generar el dvi/pdf).</li>
+      </ul>
+
+      <p>Para cambiarlo, debes editar los archivos .keylayout.</p>
+    </section>
+
+    <section>
+      <h2>Adaptaciones personales</h2>
+
+      <p>Los dos archivos .keylayout son ficheros de texto, así que cualquiera
+        puede abrirlos y adaptarlos a su gusto. Pero hay que hacer una
+        advertencia importante: son archivos Unicode (UTF-8), no ASCII,
+        luego para editarlos hay que usar un programa que permita
+        escribir leer y archivos Unicode. Por ejemplo, TeXShop, siempre
+        que en las preferencias hayamos señalado que use codificación
+        UTF-8 Unicode.</p>
+
+      <p>Con esa salvedad, están escritos en xml, y son fáciles de entender.
+        Se dan detalles de todo esto en la «Technical Note TN2056»
+        de Apple:
+        <a href="http://developer.apple.com/technotes/tn2002/tn2056.html">http://developer.apple.com/technotes/tn2002/tn2056.html</a>
+        (que también hemos incluido en la distribución).
+        Lamentablemente, tras hacer cambios en los archivos y reinstalarlos,
+        hay veces que el sistema no se entera de que los hemos modificado.
+        Podemos forzarle a ello usando en el Terminal el comando «touch»
+        de Unix aplicado al directorio Keyboard Layouts y, por si acaso,
+        al Library que lo contiene (también puede ser útil
+        jugar con las fechas, adelantando previamente el calendario).
+        Si, al hacer modificaciones, hemos cometido errores, los podemos
+        observar en la Consola.</p>
+    </section>
+
+    <section>
+      <h2>Recordatorio final</h2>
+
+      <p>Todo esto se distribuye bajo licencia GPL de GNU:
+        <a href="http://www.gnu.org">http://www.gnu.org</a></p>
+
+      <p>¡<a href="http://www.unirioja.es/cu/jvarona/downloads/TecladosTeX.zip">Descárgalo</a>
+        y que lo disfrutes!</p>
+
+      <p>Juan Luis Varona</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><em>Fecha de última modificación de
+        <a href="http://www.unirioja.es/cu/jvarona/tecladoTeX.html">esta página</a>:
+        29 de diciembre de 2004.</em></p>
+      <p><a href="mailto:jvarona@unirioja.es">jvarona@unirioja.es</a></p>
+      <p>Mi página web sobre TeX (en español):
+        <a href="http://www.unirioja.es/cu/jvarona/tex.html">http://www.unirioja.es/cu/jvarona/tex.html</a><br>
+        Página web personal (en español):
+        <a href="http://www.unirioja.es/cu/jvarona/hola.html">http://www.unirioja.es/cu/jvarona/hola.html</a><br>
+        Página web personal (en inglés):
+        <a href="http://www.unirioja.es/cu/jvarona/welcome.html">http://www.unirioja.es/cu/jvarona/welcome.html</a></p>
+    </div>
+  </footer>
+</body>
+</html>
