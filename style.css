@@ -343,6 +343,12 @@ figcaption {
   width: 240px;
   height: auto;
   object-fit: contain;
+  margin-inline: auto;
+}
+
+.portrait--tall figcaption {
+  max-width: 240px;
+  margin-inline: auto;
 }
 
 .covers {
