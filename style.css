@@ -397,19 +397,14 @@ main tt { color: var(--accent-strong); }
 
 /* Publication lists */
 main ul.publications {
-  list-style: none;
-  padding-left: 0;
+  list-style: disc;
+  padding-left: 1.3rem;
 }
 
 main ul.publications > li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-main ul.publications > li:first-child { padding-top: 0; }
-main ul.publications > li:last-child {
-  padding-bottom: 0;
+  padding: 0;
   border-bottom: 0;
+  margin-bottom: .45rem;
 }
 
 main ul.publications li em { color: var(--muted); }
